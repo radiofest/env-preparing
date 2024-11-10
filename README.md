@@ -14,3 +14,22 @@
 ```
 sudo dd bs=4M conv=fsync status=progress if=DragonOS_Pi64_Beta37.img of=/dev/sdb
 ```
+
+
+## Обновление ПО LimeSDR
+
+Для обновления ПО LimeSDR необходимо
+1. подключить LimeSDR к разьёму USB3.0 ПК;
+2. проверить, что LimeSDR обнаруживается, выполнив команду `LimeUtil --find`, результат успешного выполнения которой имеет вид
+```
+  * [LimeSDR-USB, media=USB 3.0, module=FX3, addr=1d50:6108, serial=0009083401893821]
+```
+или пустую строку, если устройство не обнаружено;
+3. обновить ПО LimeSDR, выполнив команду `LimeUtil --update`, результат успешного выполнения которой имеет вид
+```
+...
+Connected to [LimeSDR-USB [USB 3.0] 9083401893821]
+Existing firmware is same as update (4)
+Existing gateware is same as update (2.23)
+Firmware and Gateware update is not required.
+```
